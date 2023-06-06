@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="cruds.css">
+</head>
+<body>
+    <div class="crud">
+
+<div class="head">
+    <h2>crud</h2>
+    <p>product managment system</p>
+</div>
+
+
+
+<div class="inputs">
+<input type="text" id="title" placeholder="title">
+<div class="priceCount">
+    <input onkeyup="getPrice()" type="number" id="price" placeholder="price">
+    <input onkeyup="getPrice()" type="number" id="taxes" placeholder="taxes">
+    <input onkeyup="getPrice()" type="number" id="adds" placeholder="adds">
+    <input onkeyup="getPrice()" type="number" id="discount" placeholder="discount">
+     <i id="total"></i>
+</div>
+<input type="text" id="category" placeholder="category">
+<input type="number" id="count" placeholder="count">
+<BUtton id="submit">Create</BUtton>
+
+</div>
+
+
+
+
+<div class="outputs">
+
+<div class="searchBlock">
+    <input onkeydown="if(event.keyCode === 13) { searching(this.value)}" id="search" type="text" placeholder="search" >
+
+<div class="btnSearch">
+        <button onclick="searchType(this.id)" id="srchTtl">
+            Search By Title
+            </button>
+            <button onclick="searchType(this.id)" id="srchCtgry">
+                Search By Category
+                </button>
+</div>
+<div id="clearbtn" onclick="deleteAll()"> </div>
+</div>
+<table >
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>taxes</th>
+        <th>adds</th>
+        <th>discount</th>
+        <th>total</th>
+        <th>category</th>
+        <th>update</th>
+        <th>delete</th>
+    </tr>
+    <tbody id="tbody">
+        
+     
+    </tbody>
+</table>
+
+
+</div>
+    </div>
+
+
+    <script src="/cruds.js"></script>
+</body>
+</html>
